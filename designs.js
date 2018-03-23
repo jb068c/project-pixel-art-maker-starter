@@ -2,7 +2,7 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
-const myTable = document.getElementById(`pixelCanvas`);
+let myTable = document.getElementById(`pixelCanvas`);
 function makeGrid() {
   console.log("connected");
 
@@ -16,8 +16,8 @@ function makeGrid() {
         }
         myTable.appendChild(newRow)
     }
-    document.body.appendChild(myTable);
   };
+    document.body.appendChild(myTable);
 
 const btn = document.getElementsByTagName(`input`);
-  btn[2].addEventListener("click", makeGrid);
+  btn[2].addEventListener("click", makeGrid, false);
